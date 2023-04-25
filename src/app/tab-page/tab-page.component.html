@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div style="height: 50px;"></div>
+    <ejs-tab id="tab_adaptive" #adaptiveTab heightAdjustMode='None' height='90vh'>
+        <e-tabitems>
+            <e-tabitem *ngFor="let item of headerText" [header]="item">
+                <ng-template #content>
+                    <ng-container *ngComponentOutlet="item.component;"></ng-container>
+                </ng-template>
+            </e-tabitem>
+        </e-tabitems>
+    </ejs-tab>
+</div>

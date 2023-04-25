@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItemModel } from '@syncfusion/ej2-angular-navigations';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-page-two',
+  templateUrl: './page-two.component.html',
+  styleUrls: ['./page-two.component.scss']
 })
-export class AppComponent {
-  title = 'syncfusion-test';
+export class PageTwoComponent {
   constructor(private router: Router) { }
 
   onMenuItemSelect(args: any) {
@@ -20,10 +19,10 @@ export class AppComponent {
       text: 'Dashboard',
       iconCss: 'e-icons e-comments',
       items: [
-        { text: 'About Us' ,iconCss: 'e-icons e-comments'},
-        { text: 'Customers' ,iconCss: 'e-icons e-comments'},
-        { text: 'Blog' , url: 'Blog',iconCss: 'e-icons e-comments'},
-        { text: 'Careers', url: 'Careers', iconCss: 'e-icons e-comments'},
+        { text: 'About Us' },
+        { text: 'Customers' },
+        { text: 'Blog' , url: 'Blog',},
+        { text: 'Careers', url: 'Careers', },
       ],
     },
   ];
@@ -31,7 +30,7 @@ export class AppComponent {
     {
       text: 'Products',iconCss: 'e-icons e-comments',
       items: [
-        { text: 'Developer', url: 'developer', iconCss: 'e-icons e-comments'},
+        { text: 'Developer', url: 'developer', },
         { text: 'Analytics' },
         { text: 'Reporting' },
         { text: 'Help Desk' },
